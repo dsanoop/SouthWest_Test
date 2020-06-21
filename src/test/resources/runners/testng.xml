@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Southwest Regression Suite">
+  <test name="Search Flights">
+    <classes>
+      <class name="com.swest.test.tests.SearchFlights"/>
+    </classes>
+  </test> <!-- Search Flights -->
+</suite> <!-- Southwest Regression Suite -->
