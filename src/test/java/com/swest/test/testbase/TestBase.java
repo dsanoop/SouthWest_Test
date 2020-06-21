@@ -12,28 +12,32 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 	
-	public static WebDriver driver;
+	public static WebDriver cdriver, fdriver, edriver, idriver ;
 	
 	@BeforeSuite
 	public static void SetUp() {
-		//WebDriverManager.chromedriver().setup();
-		//driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		cdriver = new ChromeDriver();
 		
-		//WebDriverManager.firefoxdriver().setup();
-		//driver = new FirefoxDriver();
+		WebDriverManager.firefoxdriver().setup();
+		fdriver = new FirefoxDriver();
 		
 		WebDriverManager.edgedriver().setup();
-		driver = new EdgeDriver();
+		edriver = new EdgeDriver();
 				
-		//WebDriverManager.iedriver().setup();
-		//driver = new InternetExplorerDriver();
+		WebDriverManager.iedriver().setup();
+		idriver = new InternetExplorerDriver();
 		
 		//WebDriverManager.operadriver().setup();
 		//driver = new OperaDriver();
 		
 		
 		
-		driver.get("https://www.southwest.com/");
+		cdriver.get("https://www.southwest.com/");
+		fdriver.get("https://www.southwest.com/");
+		edriver.get("https://www.southwest.com/");
+		idriver.get("https://www.southwest.com/");
+		//driver.get("https://www.southwest.com/");
 	}
 
 }
